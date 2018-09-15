@@ -1,0 +1,53 @@
+#square1{
+    height:75px;
+    width: 75px;
+    background-color: #02b3e4;
+}
+#square2{
+    height:75px;
+    width: 75px;
+    background-color: #2d3c49;
+}
+#square3{
+    height:75px;
+    width: 75px;
+    background-color: #02b3e4;
+}
+
+.container{
+    align-items:center;
+}
+.mini_container{
+    margin-bottom: 90px;
+}
+hr {
+    border: none;
+    height: 5px;
+    /* Set the hr color */
+    color: #333; /* old IE */
+    background-color: #333; /* Modern Browsers */
+}
+p {
+    color: #7F7F7F;
+}
+#featured{
+    font-size: 20px;
+}
+.ex3{
+    margin-left: 40px;
+}
+
+#biggestScreen{
+    margin-bottom: 50px;
+}
+#logo{
+    margin-top:10px;
+    height: 100px;
+}
+#header-1{
+    color: #02b3e4;
+    font-size:50px;
+}
+.url-title{
+    font-size: 50px;
+}
