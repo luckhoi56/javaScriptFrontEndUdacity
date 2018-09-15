@@ -1,0 +1,107 @@
+<link rel="stylesheet" media="screen and (min-width: 300px)" href="pattern.css">
+This to make the page feel responsive
+
+<link rel="stylesheet" media="screen and (min-width:500px)" href="over500.css"
+this means to use this file if the width is at least 500px
+
+
+@median screen and (max-width: 500px){
+    .yes {
+        opacity: 1;
+    }
+    .no {
+        opacity: 0
+    }
+}
+
+if the max-witdh is 500px, opacity is 1, if not opacity is 0
+
+*Choosing a break point:
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="weather.css">
+<link rel="stylesheet" media="screen and (min-width: 550px)" href="weather-medium.css">
+
+
+flex box:
+display:flex // the browser will make it to fit.
+flex-wrap:wrap
+
+.red{order:1;}
+.green{order:5;}
+
+*Deconstructing flex box:
+<style type="text/css">
+.container{
+    display: flex;
+    flex-wrap: wrap;
+}
+</style>
+
+header {width: 100%; order: 1;}
+.red {width: 50%; order: 2;}
+.orange {width: 50%; order:3;}
+
+*Mostly fluid layout practice:
+
+
+*Off Canvas:
+
+*code example:
+<nav id="drawer" class="dark_blue">
+</nav>
+<main class ="light_blue">
+</main>
+
+html, body, main {
+    height: 100%;
+    width: 100%;
+}
+
+
+nav {
+    width: 300px;
+    height: 100%;
+    position: absolute;
+    transform: translate(-300px, 0);
+    transistion: transform 0.3s ease;
+}
+
+nav.open {
+    transform: translate (0,0);
+}
+//add an open class to reset the transform
+
+@media screen and (min-width: 600px){
+    nav {
+        position: relative;
+        transform: translate (0,0);
+    }
+    body {
+        display: flex;
+        flex-flow: row nowrap;
+    }
+    main {
+        width: auto;
+        flex-grow: 1; // to grow back the original size
+    }
+}
+
+Another example of nav
+//the nav bar start on the very left of the screen
+nav {
+    width: 300px;
+    height: 100%;
+    position: absolute;
+    -webkit-transform: translate(-300px, 0);
+    transform: translate (-300px, 0);
+    transistion: transform 0.3 ease;
+}
+
+nav.open {
+    -webkit-transform: translate (0,0);
+    transform: translate (0,0);
+}
+
+//once the nav bar is open, offeet it 0,0.
+
+*In between the col-md-* class, if the class is too separate, make sure you include class="row" inside
