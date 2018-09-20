@@ -105,3 +105,33 @@ nav.open {
 //once the nav bar is open, offeet it 0,0.
 
 *In between the col-md-* class, if the class is too separate, make sure you include class="row" inside
+
+#Create fragment out of document
+const fragment = document.createDocumentFragment();
+
+for (let i=0; i< 200; i++){
+    const newElement = document.createElement('p');
+    newElement.innerText = 'This is paragraph number '+ i;
+    fragment.appendChild(newElement);
+}
+
+document.body.appendChild(fragment);
+
+For the event listener, when the event is called, it will be moved to the queue first. When it gets to its turn, it then will be moved to the stack and be processed.
+
+The addEventListener will be executed normally. It will add the listener to the browser and move on.
+
+#setTimeOut()
+Pure javascript with no framework like nodeJS is synchronous, meaning it can be stuck in the loop the entire time.
+We can use setTimeout(funcion, 0) to make the function does not block the user-browser interaction. Think of this, if the setTimeout(0) is invoked, it will make the function go back to the queue and wait instead stay on the top forever.
+
+Idea:
+let count = 1;
+function generate(){
+
+    for loop...
+
+}
+if (count < 2000)
+setTimeout(generateParagraphs, 0); // this will make the generate function goes back to the queue and wait for its turn.
+
